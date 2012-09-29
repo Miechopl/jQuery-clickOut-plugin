@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery-Custom-Selectbox-plugin demo</title>
+		<script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
+		<script src="js/jquery.clickOut.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('#click_box').clickOut(function() {$('#click_box').html('<p>You clicked on the <strong>outside</strong>.</p>');});
+				$('#click_box').click(function() {$('#click_box').html('<p>You clicked on <strong>me</strong>.</p>');});
+			});
+		</script>
+		<style>
+			body {
+				color: #222;
+				background: #f8f8f8;
+				font: normal normal normal 13px/1.5 Helvetica, Arial, sans-serif;
+			}
+			#click_box {
+				background: #eaeaea;
+				border: 1px solid #666;
+				padding: 10px;
+				text-align: center;
+				width: 300px;
+				height: 300px;
+				margin: 100px auto;
+			}
+			#click_box p {
+				padding: 100px 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="click_box">
+			<p>Click <strong>me</strong> or click on the <strong>outside</strong>.</p>
+		</div>
+	</body>
+</html>
